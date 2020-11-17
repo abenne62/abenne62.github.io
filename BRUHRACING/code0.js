@@ -696,7 +696,6 @@ gdjs.Downhill_32Bike_32DemoCode.GDglowObjects2.length = 0;
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects2.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects2[i].setWidth((gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) / 2));
 }
-}{gdjs.evtTools.window.setWindowSize(runtimeScene, 1200, 600, true);
 }{gdjs.evtTools.window.centerWindow(runtimeScene);
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDglowObjects2.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDglowObjects2[i].setZOrder(130);
