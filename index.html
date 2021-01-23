@@ -2,22 +2,25 @@
 <html>
 <title>View Video Files</title>
 <head>
-<script>
-  // Create 'user' object that will contain Detect.js stuff
-  // Call detect.parse() with navigator.userAgent as the argument
-  var user = detect.parse(navigator.userAgent);
-
-  // Display some property values in my browser's dev tools console
-  console.log(
-    user.browser.family
-    user.browser.version
-    user.os.name
-  );
-</script>
-
-
-</head>
 <body>
+  <div class="container"> 
+    <header class="header">
+      <h1>Browser Detection with JavaScript</h1>
+      <p class="sub">A couple of techniques for getting browser and operating system information.</p>
+      <nav class="nav">
+        <p><a href="http://sixrevisions.com/javascript/browser-detection-javascript/">View tutorial</a></p>
+      </nav>
+    </header>
 
+    <section class="section">
+      <h2 class="sub">Detection method</h2>
+      <p>
+      <a class="button" id="navigator-obj" href="#message-area">Navigator.userAgent</a> 
+      <a class="button b" id="detect-js" href="#message-area">Detect.js</a>
+      </p>
+    </section>
+    
+    <section id="message-area" class="section message"><noscript>JavaScript is not available in your browser. This demo won't work.</noscript></section>
+  </div>
 </body>
 </html>
