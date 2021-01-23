@@ -1,42 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Browser Detection with JavaScript</title>
-<meta name="description" content="Demo of Navigator object and Detect.js">
-<meta name="author" content="Six Revisions">
-<link rel="icon" href="http://sixrevisions.com/favicon.ico" type="image/x-icon" />
-<link href='http://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="presentation-only/presentation-only.css">
-<script src="Detect.js/detect.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shared Video Files</title>
+  </head>
+  <body>
+    <script>
+     function msieversion() {
 
-<script src="browser-detect-javascript.js"></script>
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
 
-</head>
-<body>
-  <div class="container"> 
-    <header class="header">
-      <h1>Browser Detection with JavaScript</h1>
-      <p class="sub">A couple of techniques for getting browser and operating system information.</p>
-      <nav class="nav">
-        <p><a href="http://sixrevisions.com/javascript/browser-detection-javascript/">View tutorial</a></p>
-      </nav>
-    </header>
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+        {
+            alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+        }
+        else  // If another browser, return 0
+        {
+            alert('otherbrowser');
+        }
 
-    <section class="section">
-      <h2 class="sub">Detection method</h2>
-      <p>
-      <a class="button" id="navigator-obj" href="#message-area">Navigator.userAgent</a> 
-      <a class="button b" id="detect-js" href="#message-area">Detect.js</a>
-      </p>
-    </section>
-    
-    <section id="message-area" class="section message"><noscript>JavaScript is not available in your browser. This demo won't work.</noscript></section>
-  </div>
-</body>
+        return false;
+    }
+    </script>
+  </body>
 </html>
